@@ -7,12 +7,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    concurrency:
-      group: ${{ github.workflow }}
-      cancel-in-progress: true
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -22,30 +16,14 @@ jobs:
         with:
           node-version: 20
 
-      - name: Cache node_modules
-        id: cache
-        uses: actions/cache@v4
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
       - name: Install dependencies
-        run: npm ci
-        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm install
 
-      - name: Set PUBLIC_URL
-        run: |
-          PUBLIC_URL=$(echo $GITHUB_REPOSITORY | sed -r 's/^.+\/(.+)$/\/\1\//')
-          echo PUBLIC_URL=$PUBLIC_URL > .env
+      - name: Build the project
+        run: npm run build
 
-      - name: Build
-        run: |
-          npm run build
-
-      - name: Deploy to gh-pages branch
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./out
