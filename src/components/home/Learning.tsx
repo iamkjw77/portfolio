@@ -19,7 +19,7 @@ const Learning = () => {
           variants={learningContainerVariants}
           className="space-y-8">
           <div className="flex items-center gap-2 mb-12">
-            <Book className="w-8 h-8 text-purple-600" />
+            <Book className="w-8 h-8 text-accent" />
             <h2 className="text-3xl font-bold">Learning & Education</h2>
           </div>
 
@@ -41,15 +41,15 @@ const Learning = () => {
                     group-hover:bg-gray-50 dark:group-hover:bg-gray-700
                     relative h-full">
                     <div
-                      className="absolute inset-0 bg-purple-600/0 
-                    group-hover:bg-purple-600/5 dark:group-hover:bg-purple-600/10 
+                      className="absolute inset-0 bg-accent/0 
+                    group-hover:bg-accent/5 dark:group-hover:bg-accent/10 
                     rounded-lg transition-colors duration-300"
                     />
                     <div className="flex items-start justify-between gap-4">
                       <div>
                         <h3
                           className="text-xl font-semibold text-gray-900 dark:text-gray-100
-                        group-hover:text-purple-600 dark:group-hover:text-purple-400
+                        group-hover:text-accent dark:group-hover:text-purple-400
                         transition-colors duration-300">
                           {study.title}
                         </h3>
@@ -60,7 +60,7 @@ const Learning = () => {
                       </div>
                       <span
                         className="px-3 py-1 bg-purple-100 dark:bg-purple-900 
-                      text-purple-600 dark:text-purple-300 rounded-full text-sm 
+                      text-accent dark:text-purple-300 rounded-full text-sm 
                       whitespace-nowrap min-w-[70px] text-center
                       group-hover:bg-purple-200 dark:group-hover:bg-purple-800/60
                       transition-colors duration-300">
@@ -78,7 +78,7 @@ const Learning = () => {
                         <li
                           key={item}
                           className="flex items-start text-sm md:text-base dark:text-gray-300">
-                          <span className="text-purple-600 mr-2">•</span>
+                          <span className="text-accent mr-2">•</span>
                           <p>{item}</p>
                         </li>
                       ))}

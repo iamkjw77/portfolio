@@ -1,0 +1,30 @@
+{
+  "name": "김지원 | Frontend Developer",
+  "short_name": "김지원",
+  "description": "프론트엔드 개발자 김지원의 포트폴리오 웹 사이트입니다.",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/og-image.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["technology", "portfolio", "developer"],
+  "keywords": [
+    "프론트엔드",
+    "개발자",
+    "포트폴리오",
+    "김지원",
+    "React",
+    "Next.js",
+    "TypeScript"
+  ],
+  "author": "김지원",
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "https://iamkjw77.github.io/portfolio"
+    }
+  ]
+}

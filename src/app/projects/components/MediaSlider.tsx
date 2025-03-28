@@ -28,7 +28,7 @@ const MediaSlider = ({ media, projectName }: MediaSliderProps) => {
   const currentMedia = media[currentIndex];
 
   return (
-    <div className="relative w-full h-[400px] md:h-[500px] mb-8">
+    <div className="relative w-full h-[400px] md:h-[500px] mb-12 mt-6">
       <AnimatePresence initial={false} mode="wait">
         <motion.div
           key={currentIndex}
@@ -70,6 +70,7 @@ const MediaSlider = ({ media, projectName }: MediaSliderProps) => {
                   className="w-full h-full object-contain"
                   controls={false}
                   autoPlay={true}
+                  muted
                   loop
                   onEnded={() => setIsPlaying(false)}>
                   <source src={currentMedia.url} type="video/mp4" />
@@ -85,18 +86,18 @@ const MediaSlider = ({ media, projectName }: MediaSliderProps) => {
         <>
           <button
             onClick={handlePrevious}
-            className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+            className="z-200 absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-gray-400 text-white hover:bg-black/50 transition-colors cursor-pointer"
             aria-label="이전">
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={handleNext}
-            className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+            className="z-200 absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-gray-400 text-white hover:bg-black/50 transition-colors cursor-pointer"
             aria-label="다음">
             <ChevronRight className="w-6 h-6" />
           </button>
 
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+          <div className="z-200 absolute bottom-[-30px] left-1/2 -translate-x-1/2 flex gap-2">
             {media.map((_, index) => (
               <button
                 key={index}
@@ -104,8 +105,8 @@ const MediaSlider = ({ media, projectName }: MediaSliderProps) => {
                   setCurrentIndex(index);
                   setIsPlaying(false);
                 }}
-                className={`w-2 h-2 rounded-full transition-colors ${
-                  index === currentIndex ? 'bg-white' : 'bg-white/50'
+                className={`w-2 h-2 rounded-full transition-colors border border-gray-300 cursor-pointer ${
+                  index === currentIndex ? 'bg-gray-300' : 'bg-white/50'
                 }`}
                 aria-label={`${index + 1}번으로 이동`}
               />

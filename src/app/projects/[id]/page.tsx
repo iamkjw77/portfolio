@@ -2,7 +2,9 @@ import { HOME_CONSTANT } from '@/constants/home';
 import MotionProject from '../components/MotionProject';
 
 export function generateStaticParams() {
-  return HOME_CONSTANT.PROJECTS.map((project) => ({
+  const { COMPANY_PROJECTS, PERSONAL_PROJECTS } = HOME_CONSTANT;
+
+  return [...COMPANY_PROJECTS, ...PERSONAL_PROJECTS].map((project) => ({
     id: project.id,
   }));
 }
@@ -13,7 +15,10 @@ interface IProjectDetailProps {
 
 const ProjectDetail = async ({ params }: IProjectDetailProps) => {
   const { id } = await params;
-  const project = HOME_CONSTANT.PROJECTS.find((project) => project.id === id);
+  const { COMPANY_PROJECTS, PERSONAL_PROJECTS } = HOME_CONSTANT;
+  const project = [...COMPANY_PROJECTS, ...PERSONAL_PROJECTS].find(
+    (project) => project.id === id
+  );
 
   if (!project) {
     return (
@@ -25,7 +30,7 @@ const ProjectDetail = async ({ params }: IProjectDetailProps) => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto xl:px-40 py-20">
         <MotionProject project={project} />
       </div>
     </div>

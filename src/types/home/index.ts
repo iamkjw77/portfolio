@@ -25,14 +25,15 @@ export interface IProject {
   period: string;
   description: string;
   link: string;
-  media: IProjectMedia[];
+  media?: IProjectMedia[];
   techStack: string[];
   achievements: React.ReactNode;
   summary: string[];
   background: string[];
-  meaning: { title?: string; description: string[] }[];
+  meaning: { title: string; description: string[] }[];
   contributionPercentage: string;
   technicalContributions: string[];
+  members?: { team: string; size: number }[];
 }
 
 export interface IProjectMedia {

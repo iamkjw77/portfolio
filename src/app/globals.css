@@ -7,8 +7,8 @@
   --color-background: #ffffff;
   --color-foreground: #1a1a1a;
   --color-primary: #f27373;
-  --color-secondary: #666666;
-  --color-accent: #e1306c;
+  --color-secondary: #ddd;
+  --color-accent: #c06aa8;
 }
 
 /* 다크 모드 */
@@ -17,11 +17,54 @@
     --color-background: #1a1a1a;
     --color-foreground: #f5f5f5;
     --color-primary: #f27373;
-    --color-secondary: #666666;
-    --color-accent: #883ae1;
+    --color-secondary: #1f2a3a;
+    --color-accent: #c06aa8;
   }
+}
 
-  body {
-    @apply bg-background text-foreground;
-  }
+/* 스무스한 다크모드 전환 효과 */
+:root {
+  color-scheme: light;
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.dark {
+  color-scheme: dark;
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+html,
+body {
+  transition: background-color var(--transition-duration)
+      var(--transition-timing),
+    color var(--transition-duration) var(--transition-timing);
+}
+
+body {
+  @apply bg-background text-foreground;
+}
+
+/* transition이 필요한 컴포넌트들을 위한 클래스 */
+.theme-transition {
+  transition: background-color var(--transition-duration)
+      var(--transition-timing),
+    color var(--transition-duration) var(--transition-timing),
+    border-color var(--transition-duration) var(--transition-timing);
+}
+
+/* 스크롤바 스타일링 */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
 }

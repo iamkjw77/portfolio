@@ -37,7 +37,7 @@ export default function Header() {
                       target={item.target}
                       className={`text-sm font-medium transition-colors ${
                         pathname === item.path
-                          ? 'text-primary'
+                          ? 'text-accent'
                           : 'text-foreground'
                       }`}>
                       {item.label}
@@ -78,9 +78,7 @@ export default function Header() {
                     href={item.path}
                     target={item.target}
                     className={`text-lg block font-medium transition-colors ${
-                      pathname === item.path
-                        ? 'text-primary'
-                        : 'text-foreground'
+                      pathname === item.path ? 'text-accent' : 'text-foreground'
                     }`}>
                     {item.label}
                   </Link>
