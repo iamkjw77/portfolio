@@ -546,6 +546,8 @@ export const HOME_CONSTANT = Object.freeze({
         '사이드 바(검색, 친구 및 참여중인 채팅방)',
         '실시간 채팅(웹 소켓)',
         '실시간 알림(웹 소켓)',
+        'AWS EC2 CI/CD',
+        'CI/CD 구축: GitHub Actions와 Docker를 활용하여 AWS EC2에 자동 배포 환경 구성',
       ],
     },
   ] as IProject[],
