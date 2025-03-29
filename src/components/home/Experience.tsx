@@ -121,10 +121,10 @@ const Experience = () => {
                         {project.techStack.map((stack) => (
                           <li
                             key={stack}
-                            className="px-2 py-1 bg-rose-100 dark:bg-rose-900/50 
-                           text-accent dark:text-rose-300 rounded-full 
+                            className="px-2 py-1 bg-purple-100 dark:bg-purple-900/50 
+                           text-accent dark:text-purple-300 rounded-full 
                            text-xs md:text-sm
-                           group-hover:bg-rose-200 dark:group-hover:bg-rose-800/60">
+                           group-hover:bg-purple-200 dark:group-hover:bg-purple-800/60">
                             {stack}
                           </li>
                         ))}
@@ -171,7 +171,7 @@ const Experience = () => {
                       <div>
                         <h3
                           className="text-lg md:text-xl font-semibold 
-                         group-hover:text-accent dark:group-hover:text-purple-400
+                         group-hover:text-accent
                          transition-colors duration-300">
                           {project.name}
                         </h3>
@@ -194,9 +194,7 @@ const Experience = () => {
                             <li
                               key={item}
                               className="flex items-start text-base">
-                              <span className="text-accent dark:text-purple-400 mr-2">
-                                •
-                              </span>
+                              <span className="text-accent mr-2">•</span>
                               {item}
                             </li>
                           ))}

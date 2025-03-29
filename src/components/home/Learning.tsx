@@ -49,7 +49,7 @@ const Learning = () => {
                       <div>
                         <h3
                           className="text-xl font-semibold text-gray-900 dark:text-gray-100
-                        group-hover:text-accent dark:group-hover:text-purple-400
+                        group-hover:text-accent 
                         transition-colors duration-300">
                           {study.title}
                         </h3>
@@ -59,7 +59,7 @@ const Learning = () => {
                         </div>
                       </div>
                       <span
-                        className="px-3 py-1 bg-purple-100 dark:bg-purple-900 
+                        className="px-3 py-1 bg-purple-100 dark:bg-purple-900/50 
                       text-accent dark:text-purple-300 rounded-full text-sm 
                       whitespace-nowrap min-w-[70px] text-center
                       group-hover:bg-purple-200 dark:group-hover:bg-purple-800/60

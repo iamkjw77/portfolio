@@ -45,21 +45,21 @@ const Profile = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           className="flex gap-4 justify-center flex-col sm:flex-row px-4 md:px-0">
-          <li className="px-6 py-3 bg-purple-500 text-white rounded-full hover:bg-purple-700 transition-colors text-sm">
+          <li>
             <Link
               href="https://github.com/iamkjw77"
               target="_blank"
               rel="noopener noreferrer"
-              className="block">
+              className="block px-6 py-3 bg-purple-500 text-white rounded-full hover:bg-purple-700 transition-colors text-sm">
               GitHub
             </Link>
           </li>
-          <li className="px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors text-sm">
+          <li>
             <Link
               href="https://medium.com/@iamkjw"
               target="_blank"
               rel="noopener noreferrer"
-              className="block">
+              className="block px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors text-sm">
               Blog
             </Link>
           </li>

@@ -26,7 +26,7 @@ const MotionProject = ({ project }: IMotionProjectProps) => {
           <Link
             href={project.link}
             target="_blank"
-            className="inline-flex items-center text-purple-600 hover:text-purple-700 mb-6">
+            className="inline-flex items-center text-accent/90 hover:text-accent/100 mb-6">
             <ExternalLink className="w-4 h-4 mr-2" />
             프로젝트 방문하기
           </Link>
@@ -43,9 +43,7 @@ const MotionProject = ({ project }: IMotionProjectProps) => {
               <ul>
                 {project.members?.map((member) => (
                   <li key={member.team} className="flex flex-start">
-                    <span className="text-purple-600 dark:text-purple-400 mr-2">
-                      •
-                    </span>
+                    <span className="text-accent mr-2">•</span>
                     {member.team} {member.size}명
                   </li>
                 ))}
@@ -61,9 +59,7 @@ const MotionProject = ({ project }: IMotionProjectProps) => {
             <ul>
               {project.summary.map((item) => (
                 <li key={item} className="flex align-start mb-1">
-                  <span className="text-purple-600 dark:text-purple-400 mr-2">
-                    •
-                  </span>
+                  <span className="text-accent mr-2">•</span>
                   {item}
                 </li>
               ))}
@@ -88,9 +84,7 @@ const MotionProject = ({ project }: IMotionProjectProps) => {
                 <li key={title} className="mb-6">
                   {title && (
                     <h6 className="flex flex-start mb-2 font-semibold">
-                      <span className="text-purple-600 dark:text-purple-400 mr-2">
-                        •
-                      </span>
+                      <span className="text-accent mr-2">•</span>
                       {title}
                     </h6>
                   )}
@@ -115,9 +109,7 @@ const MotionProject = ({ project }: IMotionProjectProps) => {
             <ul>
               {project.technicalContributions.map((item) => (
                 <li key={item} className="flex flex-start">
-                  <span className="text-purple-600 dark:text-purple-400 mr-2">
-                    •
-                  </span>
+                  <span className="text-accent mr-2">•</span>
                   {item}
                 </li>
               ))}
@@ -132,7 +124,7 @@ const MotionProject = ({ project }: IMotionProjectProps) => {
               {project.techStack.map((stack) => (
                 <li
                   key={stack}
-                  className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 rounded-full">
+                  className="px-3 py-1 bg-purple-100 dark:bg-purple-900/50 text-accent dark:text-purple-300 rounded-full">
                   {stack}
                 </li>
               ))}

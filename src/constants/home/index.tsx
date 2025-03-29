@@ -133,7 +133,7 @@ export const HOME_CONSTANT = Object.freeze({
       summary: [
         'MD를 위한 상품(프로그램) 관리 시스템 개발 요청',
         '다양한 이미지 입력을 위해 에디터(tiptap) 커스터마이징',
-        'FullCalendar를 활용한 일정 관리 시스템 개발 (스케줄 등록, 반복 일정, 폐강 기능)',
+        'FullCalendar를 활용한 일정 관리 시스템 개발(스케줄 등록, 반복 일정, 폐강 기능)',
         '서비스 운영을 위한 기능(결제, 정산, CS 관리 등) 개발',
       ],
       background: [
@@ -191,7 +191,7 @@ export const HOME_CONSTANT = Object.freeze({
         { type: 'image', url: '/projects/wellnessbook/webview/03.png' },
       ],
       summary: [
-        '이벤트 화면이 앱 심사 지연인해 이벤트 시작 일시를 놓치는 문제 발생',
+        '이벤트 화면이 앱 심사 지연으로 인해 이벤트 시작 일시를 놓치는 문제 발생',
         '변경이 잦은 화면(선물함, 쿠폰함 등)을 웹뷰로 제작해 빠르게 배포할 수 있도록 구성',
         '웹뷰와 앱의 동일한 기능과 데이터 전달을 위한 자바스크립트 인터페이스 기반의 브릿지 개발',
         '앱 미설치 고객을 위한 웹 공유용 랜딩페이지 구현',
@@ -243,7 +243,7 @@ export const HOME_CONSTANT = Object.freeze({
         { type: 'image', url: '/projects/kookminpt/web/01.png' },
         { type: 'image', url: '/projects/kookminpt/web/02.png' },
         { type: 'image', url: '/projects/kookminpt/web/03.png' },
-        { type: 'image', url: '/projects/kookminpt/web/04.png' },
+        { type: 'image', url: '/projects/kookminpt/web/04.jpg' },
         { type: 'image', url: '/projects/kookminpt/web/05.png' },
         { type: 'image', url: '/projects/kookminpt/web/06.png' },
         { type: 'image', url: '/projects/kookminpt/web/07.png' },
@@ -318,17 +318,16 @@ export const HOME_CONSTANT = Object.freeze({
       ],
       media: [
         { type: 'image', url: '/projects/kookminpt/partner/01.png' },
-        { type: 'image', url: '/projects/kookminpt/partner/02.png' },
-        { type: 'image', url: '/projects/kookminpt/partner/03.png' },
-        { type: 'image', url: '/projects/kookminpt/partner/04.png' },
-        { type: 'image', url: '/projects/kookminpt/partner/05.png' },
-        { type: 'image', url: '/projects/kookminpt/partner/06.png' },
-        { type: 'image', url: '/projects/kookminpt/partner/07.png' },
-        { type: 'image', url: '/projects/kookminpt/partner/08.png' },
-        { type: 'image', url: '/projects/kookminpt/partner/09.png' },
-        { type: 'image', url: '/projects/kookminpt/partner/10.png' },
-        { type: 'image', url: '/projects/kookminpt/partner/11.png' },
-        { type: 'image', url: '/projects/kookminpt/partner/12.png' },
+        { type: 'image', url: '/projects/kookminpt/partner/02.jpg' },
+        { type: 'image', url: '/projects/kookminpt/partner/03.jpeg' },
+        { type: 'image', url: '/projects/kookminpt/partner/04.jpg' },
+        { type: 'image', url: '/projects/kookminpt/partner/05.jpg' },
+        { type: 'image', url: '/projects/kookminpt/partner/06.jpg' },
+        { type: 'image', url: '/projects/kookminpt/partner/07.jpg' },
+        { type: 'image', url: '/projects/kookminpt/partner/08.jpg' },
+        { type: 'image', url: '/projects/kookminpt/partner/09.jpg' },
+        { type: 'image', url: '/projects/kookminpt/partner/10.jpg' },
+        { type: 'image', url: '/projects/kookminpt/partner/11.jpg' },
       ],
       summary: [
         '국민피티에 파트너 관리 시스템 부재, 파트너 웹 플랫폼 구축 필요',
@@ -502,12 +501,13 @@ export const HOME_CONSTANT = Object.freeze({
         },
       ],
       media: [
-        { type: 'image', url: '/projects/friends/01.png' },
+        { type: 'video', url: '/projects/friends/01.mp4' },
         { type: 'image', url: '/projects/friends/02.png' },
         { type: 'image', url: '/projects/friends/03.png' },
         { type: 'image', url: '/projects/friends/04.png' },
         { type: 'image', url: '/projects/friends/05.png' },
         { type: 'image', url: '/projects/friends/06.png' },
+        { type: 'image', url: '/projects/friends/07.png' },
       ],
       summary: [
         '채팅 기능에서 아쉬운 점을 보완하고 개선하기 위해 해당 프로젝트에 참여',
@@ -515,7 +515,7 @@ export const HOME_CONSTANT = Object.freeze({
         '프론트엔드 팀장으로서 컨벤션 문서화와 팀 리딩을 맡아, 팀원들과 협력하여 프로젝트를 원활하게 진행',
       ],
       background: [
-        '이전에 채팅 기능을 구현한 경험이 있었지만, 비즈니스 로직과 UI 로직이 제대로 분리되지 않아 코드의 가독성과 유지보수성이 떨어지는 문제가 있었습니다. \n이를 개선하기 위해 보다 효율적인 구조를 고민하게 되었고, 이를 실현하고자 채팅 관련 프로젝트에 참여하게 되었습니다.',
+        '이전에 채팅 기능을 구현한 경험이 있었지만, 비즈니스 로직과 UI 로직이 제대로 분리되지 않아 코드의 가독성과 유지보수성이 떨어지는 문제가 있었습니다. \n이 문제를 해결하기 위해 보다 효율적인 구조를 고민하게 되었고, 이를 실현하고자 채팅 관련 프로젝트에 참여하게 되었습니다.',
       ],
 
       meaning: [
