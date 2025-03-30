@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
 import { IProjectMedia } from '@/types/home';
@@ -47,11 +46,10 @@ const MediaSlider = ({ media, projectName }: MediaSliderProps) => {
             <div className="relative w-full h-full">
               {!isPlaying && currentMedia.thumbnail && (
                 <div className="absolute inset-0 z-10">
-                  <Image
+                  <img
                     src={currentMedia.thumbnail}
                     alt={`${projectName} 비디오 썸네일`}
-                    fill
-                    className="object-contain"
+                    className="w-full h-full object-contain"
                   />
                   <button
                     onClick={() => setIsPlaying(true)}
