@@ -121,10 +121,10 @@ const Experience = () => {
                         {project.techStack.map((stack) => (
                           <li
                             key={stack}
-                            className="px-2 py-1 bg-purple-100 dark:bg-purple-900/50 
-                           text-accent dark:text-purple-300 rounded-full 
+                            className="px-2 py-1 bg-purple-100 dark:bg-rose-400/30
+                           text-accent dark:text-rose-100 rounded-full 
                            text-xs md:text-sm
-                           group-hover:bg-purple-200 dark:group-hover:bg-purple-800/60">
+                           group-hover:bg-purple-200 dark:group-hover:bg-rose-500/30">
                             {stack}
                           </li>
                         ))}
@@ -204,10 +204,10 @@ const Experience = () => {
                         {project.techStack.map((stack) => (
                           <li
                             key={stack}
-                            className="px-2 py-1 bg-purple-100 dark:bg-purple-900/50 
-                           text-accent dark:text-purple-300 rounded-full 
+                            className="px-2 py-1 bg-purple-100 dark:bg-rose-400/30
+                           text-accent dark:text-rose-100 rounded-full 
                            text-xs md:text-sm
-                           group-hover:bg-purple-200 dark:group-hover:bg-purple-800/60">
+                           group-hover:bg-purple-200 dark:group-hover:bg-rose-500/30">
                             {stack}
                           </li>
                         ))}
