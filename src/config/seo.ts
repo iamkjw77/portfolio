@@ -1,5 +1,5 @@
-import { Metadata } from "next";
-import { siteConfig } from "./site";
+import { Metadata } from 'next';
+import { siteConfig } from './site';
 
 export const createMetadata = (overrides?: Partial<Metadata>): Metadata => ({
   metadataBase: new URL(siteConfig.url),
@@ -12,8 +12,8 @@ export const createMetadata = (overrides?: Partial<Metadata>): Metadata => ({
   authors: [{ name: siteConfig.author }],
   creator: siteConfig.author,
   openGraph: {
-    type: "website",
-    locale: "ko_KR",
+    type: 'website',
+    locale: 'ko_KR',
     url: siteConfig.url,
     title: siteConfig.title,
     description: siteConfig.description,
@@ -28,7 +28,7 @@ export const createMetadata = (overrides?: Partial<Metadata>): Metadata => ({
     ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
     title: siteConfig.title,
     description: siteConfig.description,
     images: [siteConfig.image],
@@ -40,16 +40,16 @@ export const createMetadata = (overrides?: Partial<Metadata>): Metadata => ({
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
   },
-  manifest: "/site.webmanifest",
+  manifest: '/site.webmanifest',
   ...overrides,
 });

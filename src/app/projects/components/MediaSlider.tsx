@@ -38,12 +38,10 @@ const MediaSlider = ({ media, projectName }: MediaSliderProps) => {
           transition={{ duration: 0.3 }}
           className="absolute inset-0 rounded-lg overflow-hidden">
           {currentMedia.type === 'image' ? (
-            <Image
+            <img
               src={currentMedia.url}
               alt={`${projectName} ${currentIndex + 1}`}
-              fill
-              className="object-contain"
-              priority
+              className="w-full h-full object-contain"
             />
           ) : (
             <div className="relative w-full h-full">
