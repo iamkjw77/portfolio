@@ -46,10 +46,10 @@ export const createMetadata = (overrides?: Partial<Metadata>): Metadata => ({
     },
   },
   icons: {
-    icon: '/portfolio/favicon.ico',
-    shortcut: '/portfolio/favicon-16x16.png',
-    apple: '/portfolio/apple-touch-icon.png',
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
   },
-  manifest: '/portfolio/site.webmanifest',
+  manifest: '/site.webmanifest',
   ...overrides,
 });
