@@ -3,13 +3,6 @@
   "short_name": "김지원",
   "description": "프론트엔드 개발자 김지원의 포트폴리오 웹 사이트입니다.",
   "start_url": "/",
-  "icons": [
-    {
-      "src": "/og-image.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ],
   "categories": ["technology", "portfolio", "developer"],
   "keywords": [
     "프론트엔드",
