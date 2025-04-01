@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { siteConfig } from './site';
 
 export const createMetadata = (overrides?: Partial<Metadata>): Metadata => ({
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL(`${siteConfig.url}/portfolio`),
   title: {
     default: siteConfig.title,
     template: `%s | ${siteConfig.title}`,
