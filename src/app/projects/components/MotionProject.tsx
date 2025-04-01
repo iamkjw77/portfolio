@@ -36,7 +36,7 @@ const MotionProject = ({ project }: IMotionProjectProps) => {
           <MediaSlider media={project.media} projectName={project.name} />
         )}
 
-        <div className="space-y-6">
+        <div className="space-y-10">
           {project.members && (
             <div>
               <h3 className="text-xl font-semibold mb-3">👪 Members</h3>
