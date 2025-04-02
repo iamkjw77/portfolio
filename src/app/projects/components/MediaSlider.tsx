@@ -40,7 +40,8 @@ const MediaSlider = ({ media, projectName }: MediaSliderProps) => {
             <img
               src={currentMedia.url}
               alt={`${projectName} ${currentIndex + 1}`}
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain translate-z-0"
+              style={{ willChange: 'opacity, transform' }}
             />
           ) : (
             <div className="relative w-full h-full">
@@ -49,7 +50,8 @@ const MediaSlider = ({ media, projectName }: MediaSliderProps) => {
                   <img
                     src={currentMedia.thumbnail}
                     alt={`${projectName} 비디오 썸네일`}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain translate-z-0"
+                    style={{ willChange: 'opacity, transform' }}
                   />
                   <button
                     onClick={() => setIsPlaying(true)}
