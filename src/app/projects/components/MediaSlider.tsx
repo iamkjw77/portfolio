@@ -28,10 +28,10 @@ const MediaSlider = ({ media, projectName }: MediaSliderProps) => {
 
   return (
     <div className="relative w-full h-[400px] md:h-[500px] mb-12 mt-6">
-      <AnimatePresence initial={false} mode="wait">
+      <AnimatePresence initial={false} mode="popLayout">
         <motion.div
           key={currentIndex}
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0.5, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.3 }}
@@ -40,8 +40,7 @@ const MediaSlider = ({ media, projectName }: MediaSliderProps) => {
             <img
               src={currentMedia.url}
               alt={`${projectName} ${currentIndex + 1}`}
-              className="w-full h-full object-contain translate-z-0"
-              style={{ willChange: 'opacity, transform' }}
+              className="w-full h-full object-contain"
             />
           ) : (
             <div className="relative w-full h-full">
@@ -50,8 +49,7 @@ const MediaSlider = ({ media, projectName }: MediaSliderProps) => {
                   <img
                     src={currentMedia.thumbnail}
                     alt={`${projectName} 비디오 썸네일`}
-                    className="w-full h-full object-contain translate-z-0"
-                    style={{ willChange: 'opacity, transform' }}
+                    className="w-full h-full object-contain"
                   />
                   <button
                     onClick={() => setIsPlaying(true)}
