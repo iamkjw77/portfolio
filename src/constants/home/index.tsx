@@ -249,7 +249,7 @@ export const HOME_CONSTANT = Object.freeze({
         { type: 'image', url: '../projects/kookminpt/web/06.png' },
         { type: 'image', url: '../projects/kookminpt/web/07.png' },
         { type: 'image', url: '../projects/kookminpt/web/08.png' },
-        { type: 'image', url: '../projects/kookminpt/web/08.png' },
+        { type: 'image', url: '../projects/kookminpt/web/09.png' },
         { type: 'image', url: '../projects/kookminpt/web/10.png' },
         { type: 'image', url: '../projects/kookminpt/web/11.png' },
         { type: 'image', url: '../projects/kookminpt/web/12.png' },
