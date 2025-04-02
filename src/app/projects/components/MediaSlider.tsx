@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
 import { IProjectMedia } from '@/types/home';
@@ -13,6 +13,11 @@ interface MediaSliderProps {
 const MediaSlider = ({ media, projectName }: MediaSliderProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = media[0].url;
+  }, [media]);
 
   if (!media.length) return null;
 
@@ -30,8 +35,7 @@ const MediaSlider = ({ media, projectName }: MediaSliderProps) => {
     <div className="relative w-full h-[400px] md:h-[500px] mb-12 mt-6">
       <AnimatePresence initial={false} mode="popLayout">
         <motion.div
-          key={currentIndex}
-          initial={{ opacity: 0.5, x: 100 }}
+          initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.3 }}
