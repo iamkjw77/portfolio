@@ -121,9 +121,9 @@ export const HOME_CONSTANT = Object.freeze({
         'Material UI',
       ],
       media: [
-        { type: 'video', url: '../projects/wellnessbook/backoffice/01.mp4' },
+        { type: 'image', url: '../projects/wellnessbook/backoffice/01.png' },
         { type: 'image', url: '../projects/wellnessbook/backoffice/02.png' },
-        { type: 'image', url: '../projects/wellnessbook/backoffice/03.png' },
+        { type: 'video', url: '../projects/wellnessbook/backoffice/03.mp4' },
         { type: 'image', url: '../projects/wellnessbook/backoffice/04.png' },
         { type: 'image', url: '../projects/wellnessbook/backoffice/05.png' },
         { type: 'image', url: '../projects/wellnessbook/backoffice/06.png' },
@@ -432,7 +432,7 @@ export const HOME_CONSTANT = Object.freeze({
     },
     {
       id: 'kookminpt-admin',
-      name: '국민피티 어드민',
+      name: '국민피티 백오피스',
       period: '2021.07 - 2023.10',
       description:
         '데이터 시각화를 위한 대시보드와 서비스 운영을 위한 회원, 센터(파트너), 앱 내 콘텐츠, CS 등을 관리할 수 있도록 개발된 백오피스',
