@@ -526,8 +526,8 @@ export const HOME_CONSTANT = Object.freeze({
         },
       ],
       media: [
-        { type: 'video', url: '../projects/friends/01.mp4' },
-        { type: 'image', url: '../projects/friends/02.png' },
+        { type: 'image', url: '../projects/friends/01.png' },
+        { type: 'video', url: '../projects/friends/02.mp4' },
         { type: 'image', url: '../projects/friends/03.png' },
         { type: 'image', url: '../projects/friends/04.png' },
         { type: 'image', url: '../projects/friends/05.png' },
