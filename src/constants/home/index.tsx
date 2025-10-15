@@ -510,7 +510,6 @@ export const HOME_CONSTANT = Object.freeze({
         'React-hook-form',
         'Styled Components',
       ],
-      link: 'https://friends77.com',
       members: [
         {
           team: '프론트엔드',

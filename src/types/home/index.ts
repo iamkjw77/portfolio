@@ -24,7 +24,7 @@ export interface IProject {
   name: string;
   period: string;
   description: string;
-  link: string;
+  link?: string;
   media?: IProjectMedia[];
   techStack: string[];
   achievements: React.ReactNode;
