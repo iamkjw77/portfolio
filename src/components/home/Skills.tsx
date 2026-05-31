@@ -31,7 +31,7 @@ const Skills = () => {
                 <h3 className="text-lg md:text-xl font-semibold mb-5 text-gray-800 dark:text-gray-200">
                   {skillWithCategory.category}
                 </h3>
-                <ul className="grid grid-cols-2 sm:grid-cols-2 gap-4">
+                <ul className="grid grid-cols-2 sm:grid-cols-2 gap-x-4 gap-y-8">
                   {skillWithCategory.skills.map((skill) => {
                     const IconComponent = skill.icon as React.ElementType;
                     return (

@@ -8,13 +8,17 @@ import {
 import { Github, Mail } from 'lucide-react';
 import {
   SiAmazonec2,
+  SiClaude,
   SiCypress,
   SiDocker,
+  SiGithubcopilot,
   SiJavascript,
   SiMaterialdesign,
   SiMedium,
   SiNextdotjs,
+  SiRadixui,
   SiReact,
+  SiReacthookform,
   SiReactquery,
   SiRecoil,
   SiRedux,
@@ -23,7 +27,18 @@ import {
   SiStyledcomponents,
   SiTailwindcss,
   SiTypescript,
+  SiVite,
 } from 'react-icons/si';
+
+const CursorIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    {...props}>
+    <path d="M11.503.131 1.891 5.678a.84.84 0 0 0-.42.726v11.188c0 .3.162.575.42.724l9.609 5.55a1 1 0 0 0 .998 0l9.61-5.55a.84.84 0 0 0 .42-.724V6.404a.84.84 0 0 0-.42-.726L12.497.131a1.01 1.01 0 0 0-.996 0M2.657 6.338h18.55c.263 0 .43.287.297.515L12.23 22.918c-.062.107-.229.064-.229-.06V12.335a.59.59 0 0 0-.295-.51l-9.11-5.257c-.109-.063-.064-.23.061-.23" />
+  </svg>
+);
 
 export const HOME_CONSTANT = Object.freeze({
   SKILLS: [
@@ -39,6 +54,7 @@ export const HOME_CONSTANT = Object.freeze({
       skills: [
         { name: 'React', icon: SiReact, color: '#61DAFB' },
         { name: 'Next.js', icon: SiNextdotjs, color: '#000000' },
+        { name: 'Vite', icon: SiVite, color: '#646CFF' },
       ],
     },
     {
@@ -55,6 +71,7 @@ export const HOME_CONSTANT = Object.freeze({
         { name: 'Redux', icon: SiRedux, color: '#764ABC' },
         { name: 'Redux-Saga', icon: SiReduxsaga, color: '#b5b5b5' },
         { name: 'Recoil', icon: SiRecoil, color: '#1f6dff' },
+        { name: 'React Hook Form', icon: SiReacthookform, color: '#EC5990' },
       ],
     },
     {
@@ -67,6 +84,7 @@ export const HOME_CONSTANT = Object.freeze({
           color: '#DB7093',
         },
         { name: 'Material UI', icon: SiMaterialdesign, color: '#3178C6' },
+        { name: 'Radix UI', icon: SiRadixui, color: '#161618' },
       ],
     },
     {
@@ -76,9 +94,37 @@ export const HOME_CONSTANT = Object.freeze({
         { name: 'Docker', icon: SiDocker, color: '#1f6dff' },
       ],
     },
+    {
+      category: 'AI',
+      skills: [
+        { name: 'Claude Code', icon: SiClaude, color: '#D97757' },
+        { name: 'Cursor', icon: CursorIcon, color: '#000000' },
+        { name: 'GitHub Copilot', icon: SiGithubcopilot, color: '#000000' },
+      ],
+    },
   ] as ISkillWithCategory[],
 
   EXPERIENCES: [
+    {
+      company: '북아이피스',
+      period: '2025.06 - 재직중',
+
+      role: '프론트엔드팀',
+      description: (
+        <>
+          쏠북 - 교사와 학생이 학습자료(문제집, 모의고사 등)를 사고 팔 수 있는
+          교육 콘텐츠 마켓플레이스
+          <br />
+          쏠북 파트너 - 학습자료를 등록·판매하는 파트너(저자·교사)가 자료와 정산
+          내역을 셀프 서비스로 관리할 수 있는 대시보드
+        </>
+      ),
+      projects: [
+        '쏠북 마켓 개편작업 및 운영',
+        '쏠북 파트너 신규개발 및 운영',
+        '쏠북 디자인 시스템(@bookips/sds) v2 구축 및 운영',
+      ],
+    },
     {
       company: '브랜드엑스피트니스',
       period: '2021.07 - 2024.10 (3년 3개월)',
@@ -105,6 +151,190 @@ export const HOME_CONSTANT = Object.freeze({
   ] as IExperience[],
 
   COMPANY_PROJECTS: [
+    {
+      id: 'solvook-market',
+      name: '쏠북 마켓',
+      period: '2025.09 - 재직중',
+      description:
+        '교사와 학생이 학습자료(문제집, 모의고사 등)를 사고 팔 수 있는 교육 콘텐츠 마켓플레이스',
+      link: 'https://solvook.com',
+      techStack: [
+        'React',
+        'TypeScript',
+        'Next.js',
+        'Tailwind CSS',
+        'Zustand',
+        'React Query',
+        'Radix UI',
+        '@bookips/sds',
+        'Sentry',
+      ],
+      summary: [
+        '레거시 상태관리(MobX)를 Zustand로 교체하여 보일러플레이트와 학습 비용 절감',
+        'Ant Design 기반 UI를 사내 디자인 시스템(@bookips/sds) 및 Tailwind CSS로 마이그레이션하여 디자인 일관성 확보',
+        '결제 게이트웨이를 Toss PG로 교체하여 결제 안정성과 사용자 경험 개선',
+        '운영 중인 마켓플레이스에서 점진적 마이그레이션 전략으로 서비스 중단 없이 코드베이스 현대화',
+      ],
+      background: [
+        '쏠북 마켓은 이미 운영 중인 교육 콘텐츠 마켓플레이스로, 기존 코드베이스는 MobX 기반 상태관리와 Ant Design 기반 UI, 그리고 레거시 결제 모듈을 사용하고 있었습니다. 사내 디자인 시스템(@bookips/sds)이 도입되면서 다른 사내 앱들과 디자인 일관성을 맞춰야 했고, 상태관리·UI·결제 영역에서 점진적인 현대화가 필요한 상황이었습니다.',
+        '운영 중인 서비스인 만큼 한 번에 전체를 교체하기보다는 영역을 쪼개어 단계적으로 마이그레이션해야 했고, 실서비스에 영향을 주지 않으면서 코드베이스를 현대화하는 것이 가장 큰 과제였습니다.',
+      ],
+      meaning: [
+        {
+          title: 'MobX에서 Zustand로 상태관리 마이그레이션',
+          description: [
+            '기존 MobX는 데코레이터·옵저버 패턴과 클래스 기반 스토어 구조로 인해 보일러플레이트가 많고, 함수형 컴포넌트 및 React Query와 결합되는 환경에서는 어색한 부분이 많았습니다. 또한 새로 합류하는 팀원의 학습 비용도 적지 않았습니다.',
+            'Zustand는 함수형 API와 작은 번들 크기를 가지고 있어 도메인 스토어를 하나씩 옮기는 점진적 마이그레이션에 적합했습니다. 영역 단위로 전환을 진행한 결과 상태관리 코드량이 줄고, 컴포넌트와의 결합도가 낮아져 유지보수성이 향상되었습니다.',
+          ],
+        },
+        {
+          title: 'Ant Design을 사내 디자인 시스템(@bookips/sds) + Tailwind CSS로 교체',
+          description: [
+            'Ant Design은 컴포넌트 자체는 풍부하지만 사내 디자인 시스템과 결이 달라 같은 화면에서 두 디자인 언어가 섞이는 문제가 있었고, 커스터마이징 한계로 인해 디자이너 의도를 정확히 구현하기도 어려웠습니다.',
+            '한 번에 전부 교체하지 않고 페이지 단위로 작업을 쪼개, 신규 화면은 처음부터 @bookips/sds + Tailwind CSS로 작성하고 기존 화면은 점진적으로 교체하는 방식을 택했습니다. 마이그레이션 도중 디자인 시스템에 누락된 컴포넌트나 케이스를 발견할 때마다 디자인 시스템에도 반영해, 마켓의 마이그레이션이 곧 디자인 시스템의 안정화로 이어지는 선순환을 만들었습니다.',
+          ],
+        },
+        {
+          title: '결제 게이트웨이를 Toss PG로 교체',
+          description: [
+            '기존 결제 모듈은 안정성과 운영상의 이슈가 누적되어 있어 운영팀의 CS 대응 부담이 컸습니다. Toss PG는 결제 안정성이 높고 사용자 입장에서도 익숙한 UX를 제공한다는 점에서 교체 후보로 적합했습니다.',
+            '결제는 실패 시 곧바로 매출과 사용자 신뢰에 영향을 주는 영역이라 결제 흐름을 처음부터 끝까지 다시 점검하면서 교체했고, 결제 실패·중복 결제 같은 엣지 케이스를 검증한 뒤 전환을 진행했습니다. 교체 이후 결제 관련 CS가 줄었고, 결제 모듈 자체의 유지보수 비용도 낮아졌습니다.',
+          ],
+        },
+      ],
+      contributionPercentage: '100%',
+      technicalContributions: [
+        'MobX → Zustand 상태관리 마이그레이션',
+        'Ant Design → @bookips/sds + Tailwind CSS UI 마이그레이션',
+        '결제 게이트웨이 Toss PG 교체',
+        '디자인 시스템(@bookips/sds) 적용 및 누락 컴포넌트 피드백',
+        '레거시 페이지 점진적 리팩토링 및 운영',
+      ],
+    },
+    {
+      id: 'solvook-partner',
+      name: '쏠북 파트너',
+      period: '2025.06 - 재직중',
+      description:
+        '학습자료를 등록·판매하는 파트너(저자·교사)가 자료와 정산 내역을 셀프 서비스로 관리할 수 있는 파트너 대시보드',
+      link: 'https://partner.solvook.com',
+      techStack: [
+        'React',
+        'TypeScript',
+        'Vite',
+        'React Router',
+        'Tailwind CSS',
+        'React Hook Form',
+        'React Query',
+        'Zustand',
+        'Radix UI',
+        '@bookips/sds',
+      ],
+      summary: [
+        '파트너가 학습자료를 등록·수정·관리할 수 있는 셀프 서비스 대시보드를 자료 도메인 전반에서 신규 개발',
+        '같은 라이센스로 여러 자료를 만드는 저자 패턴을 지원하기 위한 자료 그룹 도메인과 자료 복사 기능 신규 도입',
+        'URL 쿼리스트링을 단일 진실원으로 한 필터·검색·페이지네이션 동기화 훅(useUrlParams)을 만들어 새로고침·뒤로가기에서도 상태 유지',
+        '401/419 응답 시 자동 토큰 refresh + 원본 요청 재시도하는 Axios 인터셉터로 다수 동시 쿼리 환경에서도 안전한 인증 흐름 확보',
+      ],
+      background: [
+        '쏠북 마켓에서 학습자료를 판매하는 파트너들은 자료 등록·수정·정산 조회를 별도 채널(엑셀, 메일)로 운영팀에 요청해야 했고, 운영팀이 수작업으로 처리하는 구조였습니다. 파트너 수가 늘어나면서 이 흐름은 더 이상 지속 가능하지 않게 되었고, 파트너가 직접 자료를 등록·수정하고 정산 내역을 조회할 수 있는 셀프 서비스 대시보드가 필요했습니다.',
+        '정산 기능은 이전 작업자가 구축한 후 떠난 상태였고, 이후 합류해 자료(handout) 도메인 전반과 인증·라우팅·@bookips/sds 마이그레이션 등 정산 외 모든 영역을 신규 개발 및 운영했습니다. 자료는 PDF·이미지 등 여러 파일을 함께 다루어야 했고, 화면마다 다중 필터·검색·페이지네이션 상태가 복잡하게 얽혀 있어 견고한 상태 관리가 핵심 과제였습니다.',
+      ],
+      meaning: [
+        {
+          title: '자료 그룹과 자료 복사 — 같은 라이센스 기반 다중 자료 생성 흐름 지원',
+          description: [
+            '학습자료를 만드는 저자(파트너)들은 동일한 라이센스를 기반으로 여러 자료를 만드는 패턴이 잦았는데, 자료마다 매번 라이센스 정보와 비슷한 메타데이터를 반복 입력해야 해서 업무 효율이 떨어지는 문제가 있었습니다.',
+            '이를 해결하기 위해 자료를 묶을 수 있는 "자료 그룹" 도메인을 신규 도입하여 라이센스를 한 번 등록하면 그 안에서 여러 자료를 함께 관리할 수 있도록 하고, 그룹 내에서는 기존 자료를 복사해 새 자료를 만드는 기능을 추가했습니다. 자료 복사 시에는 파일·이미지·메타데이터를 자동으로 채워두되 단원·작품 정보처럼 자료별로 달라지는 항목은 비워두어, 저자가 변경할 부분만 손보면 새 자료가 완성되도록 흐름을 설계했습니다.',
+          ],
+        },
+        {
+          title: 'useUrlParams — 필터·페이지 상태 URL 동기화',
+          description: [
+            '자료 목록은 데이터타입·출처·상태 등 다중 선택 필터가 7~8개에 달했고, 컴포넌트 메모리에만 상태를 두면 새로고침이나 뒤로가기 시 필터가 모두 초기화되어 운영팀과 사용자 모두 불편을 호소했습니다.',
+            'useUrlParams 훅을 만들어 URL 쿼리스트링을 단일 진실원으로 사용하고, getStringArray로 다중 선택 파라미터(?datatype=1&datatype=2)를 타입 안전하게 파싱하며, updateUrlParams로 배열 값을 우아하게 append/remove 하도록 설계했습니다. 결과적으로 필터 상태가 새로고침·브라우저 백/포워드에서 모두 유지되었고, 동일한 훅을 자료 목록·필터·검색 등 6곳의 화면에서 재사용할 수 있게 되었습니다.',
+          ],
+        },
+        {
+          title: '401/419 토큰 만료를 자동 복구하는 Axios 인터셉터',
+          description: [
+            '자료 목록 같은 화면은 한 페이지에 다수의 쿼리가 동시에 발사되는데, 토큰이 만료되면 모든 요청이 동시에 401을 받아 각자 refresh를 시도해 토큰 갱신이 중복 호출되고 일부 요청이 누락되는 문제가 있었습니다.',
+            'Axios 인터셉터에서 refresh 요청을 단일 promise로 큐잉하고, 이미 진행 중인 refresh가 있으면 그것을 기다린 뒤 원본 요청을 자동 재시도하도록 구현했습니다. refresh 요청 자체가 실패하는 경우는 무한 루프를 막기 위해 별도로 가드해, 다수 동시 쿼리에서도 안전한 인증 흐름이 보장됩니다.',
+          ],
+        },
+      ],
+      contributionPercentage: '100%',
+      technicalContributions: [
+        '자료(handout) 등록·수정·관리 기능 신규 개발',
+        '자료 그룹 도메인 및 자료 복사 기능 신규 도입',
+        'useUrlParams 훅 기반 필터·페이지 상태 URL 동기화',
+        '401/419 자동 토큰 refresh Axios 인터셉터',
+        '페이지 이탈 방지 (usePreventLeave)',
+        '@bookips/sds 도입 및 레거시 컴포넌트 마이그레이션',
+        'Mixpanel 이벤트 트래킹 설계',
+      ],
+    },
+    {
+      id: 'solvook-design-system',
+      name: '쏠북 디자인 시스템 v2',
+      period: '2025.06 - 재직중',
+      description:
+        '쏠북 마켓·쏠북 파트너 등 사내 다수 앱이 공통으로 사용하는 React 컴포넌트 라이브러리. v1 운영 경험을 바탕으로 아키텍처를 새로 설계해 v2로 완전히 재구축',
+      link: 'https://main.d47rk977vpmon.amplifyapp.com/?path=/story/components-button--sizes',
+      techStack: [
+        'React',
+        'TypeScript',
+        'Rollup',
+        'Tailwind CSS v4',
+        'CVA',
+        'Radix UI',
+        'Storybook',
+        'SVGR',
+      ],
+      summary: [
+        '사내 다수 앱(쏠북 마켓·파트너)이 공통으로 의존하는 React 컴포넌트 라이브러리를 v1 운영 경험을 토대로 v2로 완전 재구축',
+        'Tailwind v4 CSS Variables + CVA + Radix Headless 조합으로 variant 기반 일관 API 설계',
+        '레거시 Select/Menu를 단일/다중 모드 통합 API(SelectV2, MenuV2)로 리팩토링하여 소비 앱의 의사결정 비용 절감',
+        'Rollup ESM 번들과 GitHub Packages 배포 파이프라인 구축, Storybook addon-interactions로 시각·상호작용 검증 환경 마련',
+      ],
+      background: [
+        '쏠북의 v1 디자인 시스템은 Material UI 위에 사내 디자인을 입히는 방식으로 구축되어 있었습니다. 그러나 MUI는 자체 디자인 언어가 강하고 내부 구조가 복잡해 사내 디자인 토큰을 그대로 표현하기 어려웠고, 작은 스타일 변경에도 깊은 테마 오버라이드가 필요한 경우가 잦았습니다. 결과적으로 디자이너가 의도한 토큰·동작·접근성을 정확히 구현하기 어려운 사례가 반복적으로 나타났습니다.',
+        '이런 한계를 점진적으로 패치하기보다는 MUI에 묶이지 않은 새 아키텍처로 처음부터 다시 만드는 것이 장기적으로 옳다는 결론에 도달했고, "v2"라는 명목으로 디자인 시스템을 새로 설계해 단독으로 구축하게 되었습니다.',
+      ],
+      meaning: [
+        {
+          title: 'MUI에 묶이지 않은 Tailwind v4 + CVA + Radix 기반 v2 아키텍처 설계',
+          description: [
+            'Material UI 기반의 v1은 사내 디자인 토큰을 MUI의 테마 시스템 위에 우겨넣어 쓰는 구조라 미세한 스타일 변경에도 깊은 테마 오버라이드가 필요했고, MUI 내부 구현의 제약 때문에 디자이너가 의도한 동작과 다른 결과가 나오는 경우가 잦았습니다.',
+            'v2에서는 Tailwind v4의 CSS Variables로 테마를, CVA(class-variance-authority)로 variant 매트릭스를, Radix Headless로 동작과 접근성을 명확히 분리하는 아키텍처를 채택했습니다. 결과적으로 Button 한 컴포넌트가 5개 variant prop과 compound variant로 9가지 조합을 표현하면서도 스타일 코드는 한곳에 모이고, Radix가 키보드·스크린 리더 동작을 담당해 접근성도 동시에 확보되었습니다.',
+          ],
+        },
+        {
+          title: 'SelectV2 / MenuV2 — 단일/다중 모드를 하나의 API로 통합',
+          description: [
+            '레거시 Select(단일 전용)와 Menu(다중 전용)는 비슷한 UX를 다른 컴포넌트로 노출하고 있어 소비 앱이 매번 두 컴포넌트 중 어느 것을 쓸지 결정해야 했고, 두 컴포넌트의 키보드 동작이 미세하게 달라 사용자 경험에도 영향이 있었습니다.',
+            'Radix Popover 기반으로 둘을 통합한 SelectV2/MenuV2를 새로 설계해 single·multi 모드를 동일한 props 형태로 노출하고, ComplexTreeSelect 같은 컴포지션 패턴도 지원하도록 만들었습니다. 결과적으로 소비 앱의 컴포넌트 선택 비용이 사라졌고, 키보드 동작과 접근성도 두 모드에서 동일하게 보장됩니다.',
+          ],
+        },
+        {
+          title: '여러 소비 앱이 서로 다른 버전으로 의존하는 라이브러리 운영',
+          description: [
+            '쏠북 마켓과 파트너는 자신들의 일정에 맞춰 디자인 시스템을 업그레이드하기 때문에 두 앱이 항상 동일한 sds 버전에 머무는 것은 현실적으로 불가능했고, breaking change·신규 컴포넌트 노출 시점·문서화 책임을 정리해야 했습니다.',
+            'Rollup ESM 번들 + GitHub Packages를 통한 정기 릴리즈 파이프라인을 만들고, JSDoc 주석을 Storybook story description과 같이 관리해 소비 앱 개발자가 패키지 업그레이드 없이도 변경 사항을 확인할 수 있도록 했습니다. 그 결과 두 소비 앱이 각자의 일정으로 안전하게 마이그레이션할 수 있는 안정적인 릴리즈 운영 체계가 자리잡았습니다.',
+          ],
+        },
+      ],
+      contributionPercentage: '100%',
+      technicalContributions: [
+        'v2 아키텍처 설계 및 구현',
+        '28종 컴포넌트 설계·개발·문서화',
+        'SelectV2 / MenuV2 통합 API 리팩토링',
+        'IconV2 시스템 도입 (SVG viewBox 보존, variant 안전성 보강)',
+        'Tailwind v4 테마(color/typo/spacing/z-layer/animation) 정의',
+        'Rollup ESM 번들 + GitHub Packages 배포 파이프라인 구축',
+        'Storybook 8 + addon-interactions 환경 구성',
+      ],
+    },
     {
       id: 'wellness-admin',
       name: '웰니스북 백오피스',
