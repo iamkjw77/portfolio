@@ -815,6 +815,19 @@ export const HOME_CONSTANT = Object.freeze({
 
   LEARNING: [
     {
+      title: 'CS Sharing',
+      period: '2025.08 - 2026.02',
+      type: '사내 스터디',
+      description: '컴퓨터 구조와 운영체제를 주차별로 학습하는 사내 CS 스터디',
+      url: 'https://bookips.notion.site/CS-Sharing-246ba496d7b880ca9346e1e53c9c5b53',
+      operations: [
+        '매주 주제·범위 선정 후 주차별 자료 정리',
+        '2명이 매주 번갈아 발표하며 문제 출제·풀이로 지식 공유',
+        '컴퓨터 구조 파트: CPU 동작 원리·성능, 메모리·캐시, 보조기억장치, 입출력장치',
+        '운영체제 파트: 프로세스/스레드, CPU 스케줄링, 동기화, 교착상태, 가상 메모리, 파일 시스템',
+      ],
+    },
+    {
       title: '모던 리액트 Deep Dive',
       period: '2024.11',
       type: '스터디',
