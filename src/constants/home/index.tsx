@@ -169,6 +169,17 @@ export const HOME_CONSTANT = Object.freeze({
         '@bookips/sds',
         'Sentry',
       ],
+      media: [
+        { type: 'image', url: '../projects/solvook/market/01.png' },
+        { type: 'image', url: '../projects/solvook/market/02.png' },
+        { type: 'video', url: '../projects/solvook/market/03.mp4' },
+        { type: 'video', url: '../projects/solvook/market/04.mp4' },
+        { type: 'video', url: '../projects/solvook/market/05.mp4' },
+        { type: 'video', url: '../projects/solvook/market/06.mp4' },
+        { type: 'image', url: '../projects/solvook/market/07.png' },
+        { type: 'image', url: '../projects/solvook/market/08.png' },
+        { type: 'image', url: '../projects/solvook/market/09.png' },
+      ],
       summary: [
         '레거시 상태관리(MobX)를 Zustand로 교체하여 보일러플레이트와 학습 비용 절감',
         'Ant Design 기반 UI를 사내 디자인 시스템(@bookips/sds) 및 Tailwind CSS로 마이그레이션하여 디자인 일관성 확보',
@@ -188,7 +199,8 @@ export const HOME_CONSTANT = Object.freeze({
           ],
         },
         {
-          title: 'Ant Design을 사내 디자인 시스템(@bookips/sds) + Tailwind CSS로 교체',
+          title:
+            'Ant Design을 사내 디자인 시스템(@bookips/sds) + Tailwind CSS로 교체',
           description: [
             'Ant Design은 컴포넌트 자체는 풍부하지만 사내 디자인 시스템과 결이 달라 같은 화면에서 두 디자인 언어가 섞이는 문제가 있었고, 커스터마이징 한계로 인해 디자이너 의도를 정확히 구현하기도 어려웠습니다.',
             '한 번에 전부 교체하지 않고 페이지 단위로 작업을 쪼개, 신규 화면은 처음부터 @bookips/sds + Tailwind CSS로 작성하고 기존 화면은 점진적으로 교체하는 방식을 택했습니다. 마이그레이션 도중 디자인 시스템에 누락된 컴포넌트나 케이스를 발견할 때마다 디자인 시스템에도 반영해, 마켓의 마이그레이션이 곧 디자인 시스템의 안정화로 이어지는 선순환을 만들었습니다.',
@@ -230,6 +242,14 @@ export const HOME_CONSTANT = Object.freeze({
         'Radix UI',
         '@bookips/sds',
       ],
+      media: [
+        { type: 'image', url: '../projects/solvook/partner/01.png' },
+        { type: 'image', url: '../projects/solvook/partner/02.png' },
+        { type: 'video', url: '../projects/solvook/partner/03.mp4' },
+        { type: 'video', url: '../projects/solvook/partner/04.mp4' },
+        { type: 'image', url: '../projects/solvook/partner/05.png' },
+        { type: 'image', url: '../projects/solvook/partner/06.png' },
+      ],
       summary: [
         '파트너가 학습자료를 등록·수정·관리할 수 있는 셀프 서비스 대시보드를 자료 도메인 전반에서 신규 개발',
         '같은 라이센스로 여러 자료를 만드는 저자 패턴을 지원하기 위한 자료 그룹 도메인과 자료 복사 기능 신규 도입',
@@ -242,7 +262,8 @@ export const HOME_CONSTANT = Object.freeze({
       ],
       meaning: [
         {
-          title: '자료 그룹과 자료 복사 — 같은 라이센스 기반 다중 자료 생성 흐름 지원',
+          title:
+            '자료 그룹과 자료 복사 — 같은 라이센스 기반 다중 자료 생성 흐름 지원',
           description: [
             '학습자료를 만드는 저자(파트너)들은 동일한 라이센스를 기반으로 여러 자료를 만드는 패턴이 잦았는데, 자료마다 매번 라이센스 정보와 비슷한 메타데이터를 반복 입력해야 해서 업무 효율이 떨어지는 문제가 있었습니다.',
             '이를 해결하기 위해 자료를 묶을 수 있는 "자료 그룹" 도메인을 신규 도입하여 라이센스를 한 번 등록하면 그 안에서 여러 자료를 함께 관리할 수 있도록 하고, 그룹 내에서는 기존 자료를 복사해 새 자료를 만드는 기능을 추가했습니다. 자료 복사 시에는 파일·이미지·메타데이터를 자동으로 채워두되 단원·작품 정보처럼 자료별로 달라지는 항목은 비워두어, 저자가 변경할 부분만 손보면 새 자료가 완성되도록 흐름을 설계했습니다.',
@@ -291,6 +312,13 @@ export const HOME_CONSTANT = Object.freeze({
         'Storybook',
         'SVGR',
       ],
+      media: [
+        { type: 'image', url: '../projects/solvook/design-system/01.png' },
+        { type: 'image', url: '../projects/solvook/design-system/02.png' },
+        { type: 'image', url: '../projects/solvook/design-system/03.png' },
+        { type: 'image', url: '../projects/solvook/design-system/04.png' },
+        { type: 'image', url: '../projects/solvook/design-system/05.png' },
+      ],
       summary: [
         '사내 다수 앱(쏠북 마켓·파트너)이 공통으로 의존하는 React 컴포넌트 라이브러리를 v1 운영 경험을 토대로 v2로 완전 재구축',
         'Tailwind v4 CSS Variables + CVA + Radix Headless 조합으로 variant 기반 일관 API 설계',
@@ -303,7 +331,8 @@ export const HOME_CONSTANT = Object.freeze({
       ],
       meaning: [
         {
-          title: 'MUI에 묶이지 않은 Tailwind v4 + CVA + Radix 기반 v2 아키텍처 설계',
+          title:
+            'MUI에 묶이지 않은 Tailwind v4 + CVA + Radix 기반 v2 아키텍처 설계',
           description: [
             'Material UI 기반의 v1은 사내 디자인 토큰을 MUI의 테마 시스템 위에 우겨넣어 쓰는 구조라 미세한 스타일 변경에도 깊은 테마 오버라이드가 필요했고, MUI 내부 구현의 제약 때문에 디자이너가 의도한 동작과 다른 결과가 나오는 경우가 잦았습니다.',
             'v2에서는 Tailwind v4의 CSS Variables로 테마를, CVA(class-variance-authority)로 variant 매트릭스를, Radix Headless로 동작과 접근성을 명확히 분리하는 아키텍처를 채택했습니다. 결과적으로 Button 한 컴포넌트가 5개 variant prop과 compound variant로 9가지 조합을 표현하면서도 스타일 코드는 한곳에 모이고, Radix가 키보드·스크린 리더 동작을 담당해 접근성도 동시에 확보되었습니다.',
